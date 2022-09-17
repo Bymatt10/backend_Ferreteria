@@ -32,7 +32,7 @@ app.listen(port, () => {
     connection.sequelize
         .authenticate()
         .then(() => {
-            console.log('Database connected');
+            console.log('Database connectead');
             // associations().then(() => {
             //     console.log('Models associated')
             // })
