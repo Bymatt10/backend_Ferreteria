@@ -1,4 +1,6 @@
-crud usuario,persona, venta, movimiento de inventario ( Del cliente) Seguimiento de lo cliente,img(url), metodo de pago
-view categoria, marca, modelo,precio, productos, inventario,subcategoria,recibo_venta, producto
+crud  movimiento de inventario ( Del cliente) Seguimiento de lo cliente,img(url)
+
+view  marca, modelo,precio, productos, inventario,subcategoria,recibo_venta, producto
+
 Update inventario 
 

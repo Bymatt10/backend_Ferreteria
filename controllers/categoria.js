@@ -2,11 +2,14 @@ const Categoria = require('../models/categoria');
 
 module.exports = class categoriaController {
     async list(req, res) {
+        // #swagger.tags = ['Categoria']
+        // #swagger.description = 'Para obtener los que es la categoria'
         const list = await Categoria.findAll();
         res.send(list);
     }
 
     async get(req, res) {
+        // #swagger.tags = ['Categoria']
         const {id} = req.params;
         const categoria = await Categoria.findByPk(id);
         res.send(categoria);

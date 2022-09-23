@@ -1,6 +1,9 @@
 const express = require('express')
 const cors = require('cors')
 const Connection = require('./config/connection')
+const swaggerUi = require('swagger-ui-express')
+const swaggerFile = require('./swagger-output.json')
+// const router = require('./routers/personRouter')
 const app = express();
 
 app.use(cors());
@@ -20,6 +23,8 @@ app.use('/usuario', UsuarioRoutes);
 app.use('/venta', VentaRoutes);
 app.use('/metodoPago', metodoPagoRoutes);
 app.use('/categoria', categoriaRoutes);
+app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
+
 const port = process.env.PORT || 3001;
 // comienza a escuchar por el puerto 3000 y devuelve el sms
 
